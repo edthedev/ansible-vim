@@ -1,0 +1,13 @@
+---
+- name: vim
+  apt: name={{ item }}
+  sudo: yes
+  with_items:
+    - vim
+    - git-core
+- name: vimrc
+  copy: src=~/.vimrc dest=/home/vagrant/.vimrc
+- name: vundle
+  git: repo=https://github.com/gmarik/Vundle.vim.git dest=~/.vim/bundle/Vundle.vim
+- name: vundle plugins
+  shell: vim +PluginInstall +qall
