@@ -5,6 +5,8 @@
   with_items:
     - vim
     - git-core
+    - python
+    - python-simplejson # For text-helper.vim
 - name: vimrc
   copy: src=~/.vimrc dest=/home/vagrant/.vimrc
 - name: vundle
