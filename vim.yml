@@ -8,7 +8,7 @@
     - python
     - python-simplejson # For text-helper.vim
 - name: vimrc
-  copy: src=~/.vimrc dest=/home/vagrant/.vimrc
+  copy: src=~/.vimrc dest=~/.vimrc
 - name: vundle
   git: repo=https://github.com/gmarik/Vundle.vim.git dest=~/.vim/bundle/Vundle.vim
 - name: vundle plugins
