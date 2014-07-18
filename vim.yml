@@ -1,6 +1,6 @@
 ---
 - name: vim
-  apt: name={{ item }}
+  apt: name={{ item }} cache_valid_time=3600 state=installed update_cache=yes
   sudo: yes
   with_items:
     - vim
